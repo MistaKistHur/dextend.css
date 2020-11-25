@@ -1,4 +1,5 @@
 /* ::>> Build this list out over time, it will help you later on.. */
+/* ::>> Keep the CodePen one as the most recent up2date version & copy from there <<:: */
 *,::before,*::after{
     margin:0; padding:0;
     box-sizing:boder-box;
@@ -48,6 +49,8 @@ code q i{
    a,q,pre,code,samp,kbd{
       user-select:all;
       text-decoration:none;
+      margin:2px 4px 2px 4px;
+      padding:0.4px 4px 0.4px 4px;
       }
     p,a,b,i,pre,code{
       text-rendering: optimizeLegibility;
@@ -58,9 +61,10 @@ code q i{
       filter:blur(0.688px) contrast(107.8%);
       padding:2.4px 8px 2.4px 8px;
       font-smooth: always;
-       /* ::>> ^^ Added this to smooth out pixels in text, maybe better <<::
+       /* ::>> ^^ Added this'blur' to smooth out pixels in text, maybe better <<::
             >    in Js Detecting device type, screen res etc the       <<::
-            >    changing based on this text on mob/tab       font-smooth: never;  */
+            >    changing based on this text on mob/tab       font-smooth: never;   */
+       /* issue 1: when zooming in the blur increase's dis-preportianally !> JS-fix */
       }
     button,
     input,
@@ -68,7 +72,7 @@ code q i{
     select,
     textarea {
       font-family: inherit;
-      font-size: 100%;
+      font-size: 102.8%;
       line-height: 1.12;
       margin: 0;
     }
@@ -109,7 +113,6 @@ code q i{
     summary {
       display: list-item;
       }
-
 /* ::>> Main Resets <<:: */
    .op00{opacity:0 !important; filter:opacity(0);}
     .null_size{width:0 !important; height:0 !important;}
@@ -129,13 +132,30 @@ code q i{
     .pos_ab{position:absolute;}
     .pos_rel{position:relative;}
     .pos_stik{position:sticky;}
+    .pos_off_viewPort{position:absolute;transform:translateY(calc(100vw + 7888px);}
+    /* OR use .op00 & .vis_hid in html classes */
+    .pos_cent_trans{                        /* ??::>> Pos an Element x:centered y:center */
+                top:50vw;left:50vh;
+                transform:translate(-50%,-50%);
+                }
+    .pos_mid_top_center{                    /* ??::>> Pos an Element x:centered top `24%` */
+                top:24vw;left:50vh;
+                transform:translate(-50%,-50%);   
+                }
+    .pos_base_un_center{                    /* ??::>> Pos an Element x:entered  top `78%` */
+                top:78vw;left:50vh;
+                transform:translate(-50%,-50%);    
+                }
+    /* ::>> Clear any previous floats and apply chosen float */
+    .fltLeft{clear:both; float:left;}       /* ??::>> Float an Element to the Left  */
+    .fltRight{clear:both; float:right;}     /* ??::>> Float an Element to the Right */
 /* ::>> Position Settings <<:: */
 /* ::>> My Color Pallette <<:: */
     /* ::>> Text Elements <<:: */
        .c_sprGreen{color:springgreen;}
        .c_red{color:;}.c_green{color:;}
        .c_crims{color:crimson;}
-       .c_radio_act, .c_highlight{}               /* ::>> RadioActive looking hightlighter color*/
+       .c_radio_act, .c_highlight{}         /* ::>> RadioActive looking hightlighter color*/
 
 /* ::>> My Color Pallette <<:: */
 
@@ -157,7 +177,7 @@ code q i{
 
     }
     .bounce{
-
+     /* ::>> bounce animate*/
     }
     .jiggle{
 
@@ -177,7 +197,8 @@ code q i{
       margin-top:calc(78px + 2.78vh);      
       left:calc(27% + 8px);
       }
-    .xdebug-error tbody tr th i{                                /* ::>> This selects the line number in xdebug errs. */
+    .xdebug-error tbody tr th i{
+          /* ::>> ^^ This ^^ selects the line number in xdebug errs. */
       margin:0 14px 0 7.8px; padding:8px;
       text-shadow:0.72px 1.87px 0.3px white;
       font-weight:900;
@@ -199,3 +220,9 @@ code q i{
 
 /* ::>> Minified version here Github: <<:: */
 /* ::>> When finished create a Sass Version of this <<:: */
+
+/** ::>> Some aspects copied or adapted from normalize.css <<:: */
+
+
+
+
