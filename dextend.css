@@ -6,7 +6,7 @@
     }
 html {
   line-height: 1.108;
-   -webkit-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
   }
 body{
     text-align:center;
@@ -100,16 +100,16 @@ code q i{
              outline: 1px dotted ButtonText;
       }
     legend {
+      display: table;  
       box-sizing: border-box;
+      white-space: normal;  
+      max-width: 100%;  
       color: inherit;
-      display: table;
-      max-width: 100%;
       padding: 0;
-      white-space: normal;
       }
     svg,iframe,object,fieldset{
       border:none;  
-      }   /* ^^ Check if these effect */
+      }     /* ^^ Check if these effect */
     summary {
       display: list-item;
       }
@@ -133,16 +133,21 @@ code q i{
     .pos_rel{position:relative;}
     .pos_stik{position:sticky;}
     .pos_off_viewPort{position:absolute;transform:translateY(calc(100vw + 7888px);}
+    .x_off_vP{position:absolute;left:-48888px;}
+    .offScreen_Canv{position:relative; width:inherit; height:inherit; top:-240vh;}
+                                                 /* <<:^^ Check if this works ^^ */
+    .modal_left{} .modal_right{}  /* Use js to get elem size */
     /* OR use .op00 & .vis_hid in html classes */
+    /* Need one for items which are not Pos Absol..... */
     .pos_cent_trans{                        /* ??::>> Pos an Element x:centered y:center */
                 top:50vw;left:50vh;
                 transform:translate(-50%,-50%);
                 }
-    .pos_mid_top_center{                    /* ??::>> Pos an Element x:centered top `24%` */
+    .pos_mid_top_center{                    /* ??::>> Pos an Element x:centered top +`24%` */
                 top:24vw;left:50vh;
                 transform:translate(-50%,-50%);   
                 }
-    .pos_base_un_center{                    /* ??::>> Pos an Element x:entered  top `78%` */
+    .pos_un_base_center{                    /* ??::>> Pos an Element x:entered  top +`78%` */
                 top:78vw;left:50vh;
                 transform:translate(-50%,-50%);    
                 }
@@ -221,7 +226,10 @@ code q i{
 /* ::>> Minified version here Github: <<:: */
 /* ::>> When finished create a Sass Version of this <<:: */
 
-/** ::>> Some aspects copied or adapted from normalize.css <<:: */
+
+
+
+
 
 
 
