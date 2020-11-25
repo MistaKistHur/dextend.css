@@ -23,15 +23,36 @@ code{
     font-size:calc(7.4px + 1.23vw + 0.64vh);
     font-weight:600;
     }
-code q{
+ code q{
     color:#5e91c8;
     font-size:calc(7.4px + 1.0vw + 0.64vh);    
     }
-code q i{
+ code q i, .important{
     color:crimson;
     background:linear-gradient(-33deg,red,crimson,gold,white);
     background-clip:text;
     color:transparent;
+    }
+ code .warn, .err, .info{
+    color:yellow;
+    font-size{1.09rem}
+    }
+code .warn::before, .err::before, .ifo::before{
+    content:"!!::>>";
+    position:relative;
+    font-family:'monserat', tahoma;    
+    display:inline-block;    
+    width:auto; height:auto;
+    z-index:555;
+    left:-8px;
+    }
+code .help{
+    color:blue;
+    }
+code .help::before{
+    content"??::>>"
+    background-image:url();
+    font-family:'monserat';
     }
 /* !!::>> Remove this section b4 use <<::!! */
 /* ::>> Main Resets <<:: */
@@ -191,8 +212,8 @@ code q i{
 
     }
     ::-webkit-file-upload-button {
-      -webkit-appearance: button; /* 1 */
-      font: inherit; /* 2 */
+      -webkit-appearance: button;
+      font: inherit;
     }
 /* ??::>> .xdebug-error Section  <= Can Remove if !using <<::?? */
     .xdebug-error, .xe-parse-error{
@@ -222,9 +243,11 @@ code q i{
         }
 /* ??::>> .xdebug-error Section <<::?? */
 
-
 /* ::>> Minified version here Github: <<:: */
 /* ::>> When finished create a Sass Version of this <<:: */
+
+
+
 
 
 
