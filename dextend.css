@@ -1,0 +1,201 @@
+/* ::>> Build this list out over time, it will help you later on.. */
+*,::before,*::after{
+    margin:0; padding:0;
+    box-sizing:boder-box;
+    }
+html {
+  line-height: 1.108;
+   -webkit-text-size-adjust: 100%;
+  }
+body{
+    text-align:center;
+    text-decoration:none;
+    user-select:none;    
+    list-style:none;
+    }
+/* !!::>> Remove this section b4 use <<::!! */
+i{
+    color:white;
+    }
+code{
+    color:green;
+    font-size:calc(7.4px + 1.23vw + 0.64vh);
+    font-weight:600;
+    }
+code q{
+    color:#5e91c8;
+    font-size:calc(7.4px + 1.0vw + 0.64vh);    
+    }
+code q i{
+    color:crimson;
+    background:linear-gradient(-33deg,red,crimson,gold,white);
+    background-clip:text;
+    color:transparent;
+    }
+/* !!::>> Remove this section b4 use <<::!! */
+/* ::>> Main Resets <<:: */
+   .small{
+     font-size:calc(82% + 0.48vw);
+     }
+   b,strong {
+     font-weight: bolder;
+     }
+   abbr[title] {
+     border-bottom: none;
+     text-decoration: underline;
+     text-decoration: underline dotted;
+     }
+   a,q,pre,code,samp,kbd{
+      user-select:all;
+      text-decoration:none;
+      }
+    p,a,b,i,pre,code{
+      text-rendering: optimizeLegibility;
+      text-rendering: geometricPrecision;
+      font-size:calc(10.02px + 1.23vw + 0.722vh);
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+      filter:blur(0.688px) contrast(107.8%);
+      padding:2.4px 8px 2.4px 8px;
+      font-smooth: always;
+       /* ::>> ^^ Added this to smooth out pixels in text, maybe better <<::
+            >    in Js Detecting device type, screen res etc the       <<::
+            >    changing based on this text on mob/tab       font-smooth: never;  */
+      }
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.12;
+      margin: 0;
+    }
+    input[type=search]{
+         -webkit-appearance: textfield;
+          outline-offset: -2px;  
+    }
+    button,
+     [type="button"],
+     [type="reset"],
+     [type="submit"] {
+          -webkit-appearance: button;
+    }
+    button::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+      }    /* ::>> Restore the focus styles unset by the previous rule. <<:: */
+    button:-moz-focusring,
+      [type="button"]:-moz-focusring,
+      [type="reset"]:-moz-focusring,
+      [type="submit"]:-moz-focusring {
+             outline: 1px dotted ButtonText;
+      }
+    legend {
+      box-sizing: border-box;
+      color: inherit;
+      display: table;
+      max-width: 100%;
+      padding: 0;
+      white-space: normal;
+      }
+    svg,iframe,object,fieldset{
+      border:none;  
+      }   /* ^^ Check if these effect */
+    summary {
+      display: list-item;
+      }
+
+/* ::>> Main Resets <<:: */
+   .op00{opacity:0 !important; filter:opacity(0);}
+    .null_size{width:0 !important; height:0 !important;}
+    .vis_hid{visibility:hidden;}
+/* ::>> Display Settings <<:: */
+   .disp_none{display:none;}
+    .disp_grid{display:grid;}
+    .disp_flex{display:flex;}
+    .disp_tab{display:table;}
+    .disp_block{display:block;}
+    .disp_inFlex{display:inline-flex;}
+    .disp_inBlock{display:inline-block;}
+/* ::>> Display Settings <<:: */
+/* ::>> Position Settings <<:: */
+   .pos_fix{position:fixed;}
+    .pos_inh{position:inherit;}
+    .pos_ab{position:absolute;}
+    .pos_rel{position:relative;}
+    .pos_stik{position:sticky;}
+/* ::>> Position Settings <<:: */
+/* ::>> My Color Pallette <<:: */
+    /* ::>> Text Elements <<:: */
+       .c_sprGreen{color:springgreen;}
+       .c_red{color:;}.c_green{color:;}
+       .c_crims{color:crimson;}
+       .c_radio_act, .c_highlight{}               /* ::>> RadioActive looking hightlighter color*/
+
+/* ::>> My Color Pallette <<:: */
+
+/* ::>> Hover Hue-Rotates <<:: */
+   .hover_hue128_748ms:hover{
+     will-change:filter;
+     filter:hue-rotate(128deg);
+     transition:all 748ms ease-in-out 2ms;       
+     }
+   .hover_hue1440_880ms:hover{
+     will-change:filter;
+     filter:hue-rotate(1440deg);
+     transition:all 880ms ease-in-out 2ms;
+     }
+/* ::>> Hover Hue-Rotates <<::              */
+/* ::>>    If using need to remember   <<:: */
+/* ::>>    to add hover out transition <<:: */
+    .spring_highlight{
+
+    }
+    .bounce{
+
+    }
+    .jiggle{
+
+    }
+    .twitch{
+
+    }
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button; /* 1 */
+      font: inherit; /* 2 */
+    }
+/* ??::>> .xdebug-error Section  <= Can Remove if !using <<::?? */
+    .xdebug-error, .xe-parse-error{
+      position:relative;
+      transform:scale(1.488) translateX(-10.8%);
+      padding:2.4px; border:1.7px solid purple;
+      margin-top:calc(78px + 2.78vh);      
+      left:calc(27% + 8px);
+      }
+    .xdebug-error tbody tr th i{                                /* ::>> This selects the line number in xdebug errs. */
+      margin:0 14px 0 7.8px; padding:8px;
+      text-shadow:0.72px 1.87px 0.3px white;
+      font-weight:900;
+      transform:scale(1.79);
+      font-size:1.17rem;
+      }
+    .xdebug-error tbody tr th{
+        background:
+            linear-gradient(-33deg,
+                   rgb(235,201,52),
+                  #fce94f,#cc0000);
+                  }
+    .xdebug-error tbody tr th span{
+        margin:2px;
+        transform:scale(0.875);
+        }
+/* ??::>> .xdebug-error Section <<::?? */
+
+
+/* ::>> Minified version here Github: <<:: */
+/* ::>> When finished create a Sass Version of this <<:: */
